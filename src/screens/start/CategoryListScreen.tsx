@@ -52,12 +52,12 @@ const CategoryListScreen = ({ navigation }: any) => {
         let categoryControl = categories.find(q => q.id == item.id);
 
         if (!categoryControl)
-            style = {alignItems:"center",justifyContent:"center" ,borderStyle: 'dashed', borderColor: 'tomato', borderWidth: 1,height:140,width:140 }
+            style = {alignItems:"center",justifyContent:"center",borderRadius:10 ,borderStyle: 'solid',borderColor: '#fff', borderWidth: 1,height:120,width:140 }
 
         return(
             <>
             <Pressable onPress={() => categoryOperation(item)}>
-              <View style={{ height:140,width:140,alignItems:"center",justifyContent:"center" ,left:33}}>
+              <View style={{ height:120,width:140,borderStyle: 'solid',borderColor: '#bcbcbc',borderRadius:10, borderWidth: 0.5,margin:10,alignItems:"center",position:"relative",justifyContent:"center",left:15}}>
               <View style={style}>
                      <Text style={styles.image}>{item.img}</Text>
                     <Text style={styles.name}>{item.name}</Text>
@@ -101,10 +101,11 @@ const CategoryListScreen = ({ navigation }: any) => {
                                     numColumns={2}
                                 />
                                  <View style={styles.btnbox}>
-                              <TouchableOpacity style={styles.nextbtn} onPress={next}>
+                              
+                        </View>
+                        <TouchableOpacity style={styles.nextbtn} onPress={next}>
                               <Text style={styles.nexttxt}>Next</Text>
                                </TouchableOpacity>
-                        </View>
                             </View>
                         )
                        
@@ -119,7 +120,7 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         backgroundColor:'#1c1c1c',
-        padding:24
+        paddingHorizontal:24
     },
     title:{
         color:"#fff",
@@ -136,9 +137,11 @@ const styles = StyleSheet.create({
     },
     nexttxt:{
         color:"#fff",
+        textAlign:"center",
+        fontSize:15
     },
     image:{
-        fontSize:36,
+        fontSize:30,
         marginBottom:8,
         textAlign:"center",
     },
@@ -146,6 +149,7 @@ const styles = StyleSheet.create({
         paddingVertical:15,
         paddingHorizontal:15,
         marginVertical:10,
+        borderRadius:10,
         backgroundColor:"#018CF1",
     },
     name:{
