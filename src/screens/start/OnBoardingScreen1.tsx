@@ -1,9 +1,8 @@
-import { FlatList, StyleSheet, Text, View,TouchableOpacity } from 'react-native'
+import { FlatList, StyleSheet, Text,Button, View,TouchableOpacity } from 'react-native'
 import React, { useRef, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import onBoardingData from '../../datas/onboardingData'
 import OnBoardingItem from '../../components/onboarding/OnboardingItem'
-import { Button } from 'react-native-paper'
 import Paginate from '../../components/onboarding/Paginate'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
@@ -42,7 +41,7 @@ const OnboardingScreen1 = ({ navigation }:any) => {
       </View>
       ) : (
         <View style={{marginBottom:30,marginHorizontal:24}}>
-        <TouchableOpacity style={styles.btn}><Text style={styles.started} onPress={nextHandler}>Get Started</Text></TouchableOpacity>
+        <Button title="Get Started"  onPress={nextHandler}/>
         </View>
       )
     }
@@ -72,6 +71,8 @@ const styles = StyleSheet.create({
   started:{
     color:"#F6F6F6",
     fontSize:16,
+    position:"relative",
+    zIndex:3,
     textAlign:"center",
     fontWeight:"500"
   }

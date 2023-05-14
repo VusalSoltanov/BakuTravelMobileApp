@@ -1,17 +1,17 @@
 import { View, Text, FlatList } from 'react-native'
 import React, { useContext } from 'react'
-import { FavoritesContext } from '../../context/FavoriteContext'
+import { SaveContext } from '../../context/SaveContext'
 import { Button } from 'react-native-paper';
 
-const FavoritesMain = () => {
+const SaveMain = () => {
 
-  let { favorites, setFavorites } = useContext(FavoritesContext);
+  let { saves, setSaves } = useContext(SaveContext);
 
 
   const removeFav = (id: number) => {
 
-    let filteredFavorites = favorites.filter(q => q.id != id);
-    setFavorites([...filteredFavorites])
+    let filteredSaves= saves.filter(q => q.id != id);
+    setSaves([...filteredSaves])
   }
   const renderItem = ({ item }: any) => {
     return <>
@@ -21,10 +21,10 @@ const FavoritesMain = () => {
   }
 
   return (<>
-  <Text style={{fontSize:30}}>Length: {favorites.length}</Text>
-    <Button onPress={() => setFavorites([])}>Empty</Button>
+  <Text style={{fontSize:30}}>Length: {saves.length}</Text>
+    <Button onPress={() => setSaves([])}>Empty</Button>
     <FlatList
-      data={favorites}
+      data={saves}
       renderItem={renderItem}
       keyExtractor={item => item.id}
     />
@@ -33,4 +33,4 @@ const FavoritesMain = () => {
   )
 }
 
-export default FavoritesMain
+export default SaveMain
