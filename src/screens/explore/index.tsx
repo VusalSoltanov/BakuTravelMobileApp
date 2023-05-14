@@ -16,8 +16,8 @@ import Geolocation from 'react-native-geolocation-service';
 import SvgComponent from '../../assets/image/Pin';
 import {Platform} from 'react-native';
 
-const API_KEY = '';
-const GOOGLE_API_KEY = '';
+const API_KEY = 'bd5e378503939ddaee76f12ad7a97608';
+const GOOGLE_API_KEY = 'AIzaSyDrMUvCIcxggZV906vAOaTSvmnucKT1Nm8';
 
 const ExploreMain = () => {
   const [products, setProducts] = useState<any[]>([]);
