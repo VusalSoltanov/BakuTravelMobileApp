@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { FavoritesProvider } from "../../context/FavoriteContext"
+import { FavoritesProvider } from "../../context/SaveContext"
 import { FirstLoginContext } from "../../context/FirstLoginContext";
 import { getUserCategories, removeAllUserCategories } from "../../utilities/storage/usersSavedCategoriesHelper";
 import StartStack from "../../navigation/stack/start";
