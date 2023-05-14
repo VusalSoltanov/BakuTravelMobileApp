@@ -10,7 +10,7 @@ const Saves = createNativeStackNavigator();
 const SaveStack = () => {
   return (
     <Saves.Navigator>
-      <Saves.Screen name="SavesMain" component={SaveMain} />
+      <Saves.Screen name="SavesMain" component={SaveMain} options={{headerShown:false}}/>
     </Saves.Navigator>
   )
 }
