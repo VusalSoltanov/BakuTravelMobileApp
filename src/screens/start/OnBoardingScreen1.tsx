@@ -41,7 +41,10 @@ const OnboardingScreen1 = ({ navigation }:any) => {
       </View>
       ) : (
         <View style={{marginBottom:30,marginHorizontal:24}}>
-        <Button title="Get Started"  onPress={nextHandler}/>
+        
+        <TouchableOpacity style={styles.start} onPress={nextHandler}>
+        <Text style={{textAlign:'center',color:"#fff",fontSize:16,fontWeight:"600"}}>Get Started</Text>
+        </TouchableOpacity>
         </View>
       )
     }
@@ -67,6 +70,12 @@ const styles = StyleSheet.create({
     color:"#F6F6F6",
     fontSize:16,
     fontWeight:"500"
+  },
+  start:{
+    backgroundColor:"#018CF1",
+    paddingHorizontal:55,
+    paddingVertical:15,
+    borderRadius:10
   },
   started:{
     color:"#F6F6F6",
