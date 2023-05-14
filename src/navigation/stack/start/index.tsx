@@ -1,13 +1,16 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React,{useState} from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import OnBoardingScreen1 from '../../../screens/start/OnBoardingScreen1';
 import CategoryListScreen from '../../../screens/start/CategoryListScreen';
+import SplashScreen from '../../../screens/openScreen/SplashScreen';
 
 const Start = createNativeStackNavigator();
 
 const StartStack = () => {
+
   return (
+    
     <Start.Navigator screenOptions={{
       headerShown: false
     }}>
